@@ -1,0 +1,5 @@
+<ul class="todoList">
+    <%= for todo <- todos do %>
+        <%= todo_item(todo) %>
+    <% end %>
+</ul>

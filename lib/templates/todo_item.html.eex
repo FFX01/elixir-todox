@@ -1,0 +1,11 @@
+<li class="item" id="todo-item-<%= todo.id %>" hx-target="this" hx-swap="outerHTML">
+    <%= if todo.is_completed do %>
+        <a class="link" hx-put="todos/<%= todo.id %>">[&#10004;]</a>
+    <% else %>
+        <a class="link" hx-put="todos/<%= todo.id %>">[_]</a>
+    <% end %>
+    <p class="value">
+        <%= todo.value %>
+    </p>
+    <span class="delete" hx-delete="/todos/<%= todo.id %>" hx-swap="outerHTML">&#10006;</span>
+</li>

@@ -1,0 +1,9 @@
+<form id="todo-form"
+    hx-post="/todos"
+    hx-target=".todoList"
+    hx-swap="beforeend"
+    hx-on::after-request="this.reset()"
+>
+    <input type="text" name="value" value="<%= value %>">
+    <input type="submit" value="[Submit]">
+</form>
